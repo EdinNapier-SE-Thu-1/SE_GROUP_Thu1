@@ -1,8 +1,8 @@
-namespace EnviromentalAgency;
+namespace EnviromentalAgency.Views;
 
-public partial class InfoPage : ContentPage
+public partial class HelpPage : ContentPage
 {
-	public InfoPage()
+	public HelpPage()
 	{
 		InitializeComponent();
 	}
