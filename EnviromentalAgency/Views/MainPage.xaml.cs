@@ -1,4 +1,4 @@
-﻿namespace EnviromentalAgency;
+﻿namespace EnviromentalAgency.Views;
 
 public partial class MainPage : ContentPage
 {
