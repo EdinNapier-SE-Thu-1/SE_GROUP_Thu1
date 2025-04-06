@@ -28,8 +28,8 @@ Address and report sensor malfunctions or anomalies. CALLUM
  
 As an Administrator I want to:  
  
-Manage user access and roles within the application. ARDA   
-Maintain high levels of system security and data protection. CALLUM  
+Manage user access and roles within the application. Callum   
+Maintain high levels of system security and data protection. ARDA  
 Update sensor configurations and firmware. JUSTIN  
 Oversee data storage and implement backup strategies. OLIVER  
 
