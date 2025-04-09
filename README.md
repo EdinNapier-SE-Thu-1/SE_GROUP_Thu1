@@ -26,17 +26,11 @@ ________________________________________________________________________________
 | Task                                                                               | Assigned To    |
 |------------------------------------------------------------------------------------|----------------|
 | Manage sensor accounts and configure settings.                                     |  CALLUM        |
-|                                                                                    |                |
 | View and analyse historical environmental data.                                    | ARDA           | 
-|                                                                                    |                |
 | Receive real-time alerts on threshold breaches, displayed on an interactive map.   | CALLUM         |
-|                                                                                    |                |
 | Generate comprehensive reports on environmental trends.                            | OLIVER         |
-|                                                                                    |                |
 | Use a map to view real-time sensor statuses and alerts geographically.             | ARDA / OLIVER  | 
-|                                                                                    |                |
 | Locate and navigate to sensors in the field for maintenance or inspection purposes.| JUSTIN         | 
-|                                                                                    |                |
 
 
 **Role:  Operations Manager**
