@@ -36,7 +36,7 @@ ________________________________________________________________________________
 **Role:  Operations Manager**
 
 | Task                                                                               | Assigned To    |
--------------------------------------------------------------------------------------------------------
+|------------------------------------------------------------------------------------|----------------|
 | Monitor the operational status of sensors                                          | JUSTIN         |
 | Schedule maintenance and ensure timely checks                                      | ARDA           | 
 | Verify the accuracy and integrity of collected data                                | OlIVER         |
@@ -47,7 +47,7 @@ ________________________________________________________________________________
 
 
 | Task                                                                               | Assigned To    |
--------------------------------------------------------------------------------------------------------
+|------------------------------------------------------------------------------------|----------------|
 | Manage user access and roles within the application                                | CALLUM         |
 | Maintain high levels of system security and data protection                        | ARDA           | 
 | Update sensor configurations and firmware                                          | JUSTIN         |
