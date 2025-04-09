@@ -17,8 +17,6 @@ Code review 1 (happening on either Saturday 12th or Sunday 13th April 2025)
 
 _____________________________________________________________________________________________________________
 
-
-----------------------------------------------------------------------------
 **Tasks for this project have been assigned as follows:**
 
 **Role: Environmental Scientist**
