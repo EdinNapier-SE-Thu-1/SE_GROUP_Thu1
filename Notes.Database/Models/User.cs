@@ -1,8 +1,8 @@
-using Microsoft.EntityFrameworkCore;
+/* using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace EnviromentalAgency.Models;
+namespace Notes.Database.Models;
 
 [Table("note")]
 [PrimaryKey(nameof(Id))]
@@ -14,3 +14,4 @@ public class Note
     [Required]
     public DateTime Date { get; set; }
 }
+*/

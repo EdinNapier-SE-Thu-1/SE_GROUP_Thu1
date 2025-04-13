@@ -1,14 +1,14 @@
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Windows.Input;
-using EnviromentalAgency.Data;
-using EnviromentalAgency.Models;
+using Notes.Database.Models;
+using Notes.Database.Data;
 
 namespace EnviromentalAgency.ViewModels;
 
 public partial class NoteViewModel : ObservableObject, IQueryAttributable
 {
-    private Models.Note _note;
+    private Note _note;
 
     public string Text
     {

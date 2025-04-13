@@ -1,78 +1,85 @@
-using CommunityToolkit.Mvvm.Input;
+/*using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Windows.Input;
+using Notes.Database.Models;
+using Notes.Database.Data;
 
 namespace EnviromentalAgency.ViewModels;
 
-internal class UserViewModel : ObservableObject, IQueryAttributable
+public partial class UserViewModel : ObservableObject, IQueryAttributable
 {
-    private Models.User _user;
+    private Note _note;
 
-    public string user_id
+    public string Text
     {
-        get => _user.user_id;
+        get => _note.Text;
         set
         {
-            if (_user.user_id != value)
+            if (_note.Text != value)
             {
-                _user.user_id = value;
+                _note.Text = value;
                 OnPropertyChanged();
             }
         }
     }
 
-    public string forename => _user.forename;
+    public DateTime Date => _note.Date;
 
-    public string surname => _user.surname;
+    public int Id => _note.Id;
 
-    public ICommand SaveCommand { get; private set; }
-    public ICommand DeleteCommand { get; private set; }
-
-    public UserViewModel()
+    private NotesDbContext _context;
+    
+    public UserViewModel(NotesDbContext notesDbContext)
     {
-        _user = new Models.User();
-        SaveCommand = new AsyncRelayCommand(Save);
-        DeleteCommand = new AsyncRelayCommand(Delete);
+        _context = notesDbContext;
+        _note = new Note();
+    }
+    public UserViewModel(NotesDbContext notesDbContext, Note note)
+    {
+        _note = note;
+        _context = notesDbContext;
     }
 
-    public UserViewModel(Models.User user)
-    {
-        _user = user;
-        SaveCommand = new AsyncRelayCommand(Save);
-        DeleteCommand = new AsyncRelayCommand(Delete);
-    }
-
+    [RelayCommand]
     private async Task Save()
     {
-        _user.user_id = "";
-        _user.Save();
-        await Shell.Current.GoToAsync($"..?saved={_user.user_id}");
+        _note.Date = DateTime.Now;
+        if (_note.Id == 0)
+        {
+            _context.Notes.Add(_note);
+        }
+        _context.SaveChanges();
+        await Shell.Current.GoToAsync($"..?saved={_note.Id}");
     }
 
+    [RelayCommand]
     private async Task Delete()
     {
-        _user.Delete();
-        await Shell.Current.GoToAsync($"..?deleted={_user.user_id}");
+        _context.Remove(_note);
+        _context.SaveChanges();
+        await Shell.Current.GoToAsync($"..?deleted={_note.Id}");
     }
 
     void IQueryAttributable.ApplyQueryAttributes(IDictionary<string, object> query)
     {
         if (query.ContainsKey("load"))
         {
-            _user = Models.User.Load(query["load"].ToString());
+            _note = _context.Notes.Single(n => n.Id == int.Parse(query["load"].ToString()));
             RefreshProperties();
         }
     }
 
     public void Reload()
     {
-        _user = Models.User.Load(_user.user_id);
+        _context.Entry(_note).Reload();
         RefreshProperties();
     }
 
+
     private void RefreshProperties()
     {
-        OnPropertyChanged(nameof(user_id));
-        OnPropertyChanged(nameof(user_id));
+        OnPropertyChanged(nameof(Text));
+        OnPropertyChanged(nameof(Date));
     }
 }
+*/

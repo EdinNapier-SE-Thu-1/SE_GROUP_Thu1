@@ -1,4 +1,4 @@
-namespace EnviromentalAgency.Views;
+/* namespace EnviromentalAgency.Views;
 using EnviromentalAgency.ViewModels;
 
 public partial class AllUsersPage : ContentPage
@@ -15,3 +15,4 @@ public AllUsersPage()
 }
 
 }
+*/

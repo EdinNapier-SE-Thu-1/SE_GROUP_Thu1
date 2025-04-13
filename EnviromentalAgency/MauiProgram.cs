@@ -1,12 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
-using Microsoft.EntityFrameworkCore;
-using System.Reflection;
-using Microsoft.Extensions.Configuration;
 using System.IO;
 using EnviromentalAgency.ViewModels;
-using EnviromentalAgency.Data;
-using EnviromentalAgency.Models;
 using EnviromentalAgency.Views;
+using Notes.Database.Models;
+using Notes.Database.Data;
 
 namespace EnviromentalAgency;
 
@@ -23,17 +20,7 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		var a = Assembly.GetExecutingAssembly();
-		using var stream = a.GetManifestResourceStream("EnviromentalAgency.appsettings.json");
-			
-		var config = new ConfigurationBuilder()
-			.AddJsonStream(stream)
-			.Build();
-			
-		builder.Configuration.AddConfiguration(config);
-
-		var connectionString = builder.Configuration.GetConnectionString("DevelopmentConnection");
-		builder.Services.AddDbContext<NotesDbContext>(options => options.UseSqlServer(connectionString));
+		builder.Services.AddDbContext<NotesDbContext>();
 
 		builder.Services.AddSingleton<AllNotesViewModel>();
 		builder.Services.AddTransient<NoteViewModel>();
