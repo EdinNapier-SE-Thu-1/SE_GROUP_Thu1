@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnviromentalAgency", "C:\Users\callu\GitHub Forked Applications\SE_GROUP_Thu1\EnviromentalAgency\EnviromentalAgency.csproj", "{23D96E62-3A43-4042-AB93-0DE0051AE429}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnviromentalAgency", "EnviromentalAgency\EnviromentalAgency.csproj", "{23D96E62-3A43-4042-AB93-0DE0051AE429}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
