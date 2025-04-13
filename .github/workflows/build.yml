@@ -1,0 +1,42 @@
+name: Build & Test Workflow
+
+on: [pull_request]
+    
+jobs:
+    build:
+        runs-on: windows-latest
+        
+        steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+
+        - name: Download SqlServer
+          uses: potatoqualitee/mssqlsuite@v1.7
+          with:
+            install: sqlengine, sqlpackage
+    
+        - name: Run sqlclient
+          run: |
+            sqlcmd -S localhost -U sa -P dbatools.I0 -Q "CREATE DATABASE TestDb;"
+            sqlcmd -S localhost -U sa -P dbatools.I0 -d TestDb -Q "SELECT @@version;"
+          
+        - name: Setup .NET
+          uses: actions/setup-dotnet@v4
+          with: 
+            dotnet-version: 8.0
+            
+        - name: Restore workloads
+          run: dotnet workload restore ./EnvironmentalAgencys/EnvironmentalAgencys.csproj
+          
+        - name: Restore dependencies
+          run: dotnet restore ./EnvironmentalAgencys/EnvironmentalAgencys.csproj
+                 
+        - name: Build project
+          env: 
+            ConnectionStrings__TestConnection: ${{ secrets.TestConnection_CONNECTION_STRING }}
+          run: dotnet build ./EnvironmentalAgencys/EnvironmentalAgencys.csproj --framework net8.0
+          
+        - name: Test
+          env: 
+            ConnectionStrings__TestConnection: ${{ secrets.TestConnection_CONNECTION_STRING }}
+          run: dotnet test ./EnvironmentalAgencys.sln --framework net8.0

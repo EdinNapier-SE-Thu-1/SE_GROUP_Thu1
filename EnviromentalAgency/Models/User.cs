@@ -7,7 +7,6 @@ internal class User
     public string forename { get; set; }
     public string surname { get; set; }
     public string email {get; set;}
-
     public string role {get; set;}
 
     public User()
