@@ -30,7 +30,15 @@ jobs:
           
         - name: Restore dependencies
           run: dotnet restore ./EnviromentalAgency/EnviromentalAgency.csproj
-                 
+
+        - name: Create appsettings.json
+          run: |
+            echo '{
+              "ConnectionStrings": {
+                "TestConnection": "${{ secrets.TestConnection_CONNECTION_STRING }}"
+              }
+            }' > ./Notes.Database/appsettings.json
+               
         - name: Build project
           env: 
             ConnectionStrings__TestConnection: ${{ secrets.TestConnection_CONNECTION_STRING }}
