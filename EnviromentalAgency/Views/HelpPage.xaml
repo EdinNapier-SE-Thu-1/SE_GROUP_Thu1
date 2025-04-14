@@ -3,15 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EnviromentalAgency.Views.HelpPage">
     <VerticalStackLayout Spacing="10" Margin="10">
-        <HorizontalStackLayout Spacing="10">
-            <Image Source="dotnet_bot.png"
-                   SemanticProperties.Description="The dot net bot waving hello!"
-                   HeightRequest="64" />
-            <Label FontSize="22" FontAttributes="Bold" Text="Notes" VerticalOptions="End" />
-            <Label FontSize="22" Text="v1.0" VerticalOptions="End" />
-        </HorizontalStackLayout>
+            <Label
+                Text="Help Page"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
 
-        <Label Text="This app is written in XAML and C# with .NET MAUI." />
-        <Button Text="Learn more..." Clicked="LearnMore_Clicked" />
+            <Label
+                Text="Welcome to this dor net Cross Platform Application which has been designed to allow for a better understanding of the environment throuhg the use of sesnors to monitor 3 different environmental issues"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to the help page for this app! You can find some commomn issu that users have encountered when using this app below. If you're issue is not listed below then fell free to get in touch via out email address - environmentalagency@madeup.com" />
+
     </VerticalStackLayout>
 </ContentPage>
