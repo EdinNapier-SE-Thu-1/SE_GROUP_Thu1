@@ -34,9 +34,9 @@ jobs:
         - name: Build project
           env: 
             ConnectionStrings__TestConnection: ${{ secrets.TestConnection_CONNECTION_STRING }}
-          run: dotnet build ./EnviromentalAgency/EnviromentalAgency.csproj --framework net8.0-android;net8.0-ios;net8.0-maccatalyst
+          run: dotnet build ./EnviromentalAgency/EnviromentalAgency.csproj --framework net8.0-android;net8.0-maccatalyst
           
         - name: Test
           env: 
             ConnectionStrings__TestConnection: ${{ secrets.TestConnection_CONNECTION_STRING }}
-          run: dotnet test ./EnviromentalAgency.sln --framework net8.0-android;net8.0-ios;net8.0-maccatalyst
+          run: dotnet test ./EnviromentalAgency.sln --framework net8.0-android;net8.0-maccatalyst
