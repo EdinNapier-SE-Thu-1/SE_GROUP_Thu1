@@ -24,12 +24,12 @@
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to this dor net Cross Platform Application which has been designed to allow for a better understanding of the environment throuhg the use of sesnors to monitor 3 different environmental issues" />
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
+            <Label
+                Text="Please select an tab from the list to get started. There is also a help page which you can consult if you rtun into any issues."
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Please select an tab from the list to get started. There is also a help page which you can consult if you rtun into any issues" />
+
         </VerticalStackLayout>
     </ScrollView>
 
