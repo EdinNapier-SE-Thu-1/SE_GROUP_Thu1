@@ -24,7 +24,7 @@ public class AllNotesViewModel : IQueryAttributable
 if (_context.Notes == null)
     throw new Exception("_context.Notes is null");
 
-var notesList = _context.Notes.ToList(); // <- put a breakpoint here
+    var notesList = _context.Notes.ToList(); // <- put a breakpoint here
         AllNotes = new ObservableCollection<NoteViewModel>(_context.Notes.ToList().Select(n => new NoteViewModel(_context, n)));
         NewCommand = new AsyncRelayCommand(NewNoteAsync);
         SelectNoteCommand = new AsyncRelayCommand<NoteViewModel>(SelectNoteAsync);

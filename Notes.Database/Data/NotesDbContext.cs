@@ -16,6 +16,7 @@ public class NotesDbContext : DbContext
 
     public DbSet<Note> Notes { get; set; }
 
+
  protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
  {
      var a = Assembly.GetExecutingAssembly();
@@ -25,14 +26,12 @@ public class NotesDbContext : DbContext
      var config = new ConfigurationBuilder()
          .AddJsonStream(stream)
          .Build();
-    
-     optionsBuilder.UseSqlServer(
-         config.GetConnectionString("DevelopmentConnection")
+
+    optionsBuilder.UseSqlServer(
+     config.GetConnectionString("LocalConnection"),
+     m => m.MigrationsAssembly("Notes.Migrations")
      );
- }
 
-
-
-    
+ }    
 
 }

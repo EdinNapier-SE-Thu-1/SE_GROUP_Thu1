@@ -1,8 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
-using System.IO;
+
 using EnviromentalAgency.ViewModels;
 using EnviromentalAgency.Views;
-using Notes.Database.Models;
 using Notes.Database.Data;
 
 namespace EnviromentalAgency;

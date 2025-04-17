@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes.Database", "Notes.Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes.Test", "Notes.Test\Notes.Test.csproj", "{02FFEE17-C324-4661-AF93-760C3A3A7E16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes.Migrations", "Notes.Migrations\Notes.Migrations.csproj", "{C801C1B1-6A2E-430B-8BCE-8B89377326A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notes.Migrations", "Notes.Migrations\Notes.Migrations.csproj", "{6BD13F9E-7905-44FC-855C-4EABEA3D726C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{02FFEE17-C324-4661-AF93-760C3A3A7E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02FFEE17-C324-4661-AF93-760C3A3A7E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02FFEE17-C324-4661-AF93-760C3A3A7E16}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C801C1B1-6A2E-430B-8BCE-8B89377326A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C801C1B1-6A2E-430B-8BCE-8B89377326A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C801C1B1-6A2E-430B-8BCE-8B89377326A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C801C1B1-6A2E-430B-8BCE-8B89377326A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BD13F9E-7905-44FC-855C-4EABEA3D726C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BD13F9E-7905-44FC-855C-4EABEA3D726C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BD13F9E-7905-44FC-855C-4EABEA3D726C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BD13F9E-7905-44FC-855C-4EABEA3D726C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
