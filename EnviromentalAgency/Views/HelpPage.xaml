@@ -11,7 +11,7 @@
             <Label
                 Text="Welcome to this dor net Cross Platform Application which has been designed to allow for a better understanding of the environment throuhg the use of sesnors to monitor 3 different environmental issues"
                 Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.HeadingLevel="Level3"
                 SemanticProperties.Description="Welcome to the help page for this app! You can find some commomn issu that users have encountered when using this app below. If you're issue is not listed below then fell free to get in touch via out email address - environmentalagency@madeup.com" />
 
     </VerticalStackLayout>

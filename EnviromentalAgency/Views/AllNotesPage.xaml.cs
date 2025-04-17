@@ -9,9 +9,9 @@ public partial class AllNotesPage : ContentPage
 		this.BindingContext = viewModel;
 		InitializeComponent();
 	}
-
+	
 	private void ContentPage_NavigatedTo(object sender, NavigatedToEventArgs e)
 	{
-		notesCollection.SelectedItem = null;
+		//notesCollection.SelectedItem = null;
 	}
 }

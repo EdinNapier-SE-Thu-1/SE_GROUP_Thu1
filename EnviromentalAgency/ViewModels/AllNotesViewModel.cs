@@ -1,5 +1,8 @@
+﻿
 ﻿using CommunityToolkit.Mvvm.Input;
 using Notes.Database.Data;
+using EnviromentalAgency.ViewModels;
+using EnviromentalAgency.Views;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
@@ -15,6 +18,13 @@ public class AllNotesViewModel : IQueryAttributable
     public AllNotesViewModel(NotesDbContext notesContext)
     {
         _context = notesContext;
+        if (_context == null)
+    throw new Exception("_context is null");
+
+if (_context.Notes == null)
+    throw new Exception("_context.Notes is null");
+
+    var notesList = _context.Notes.ToList(); // <- put a breakpoint here
         AllNotes = new ObservableCollection<NoteViewModel>(_context.Notes.ToList().Select(n => new NoteViewModel(_context, n)));
         NewCommand = new AsyncRelayCommand(NewNoteAsync);
         SelectNoteCommand = new AsyncRelayCommand<NoteViewModel>(SelectNoteAsync);
